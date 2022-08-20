@@ -1,13 +1,60 @@
 /* Refer to https://github.com/OleksiyRudenko/a-tiny-JS-world for the task details
    Complete the below for code reviewers' convenience:
 
-   Code repository: _put repo URL here_
-   Web app: _put project's github pages URL here_
+   Code repository: https://github.com/helengreent/a-tiny-JS-world/tree/populate-world
+   Web app: https://helengreent.github.io/a-tiny-JS-world/
    */
 
 // ======== OBJECTS DEFINITIONS ========
 // Define your objects here
 
+const dog = {
+  species: "dog",
+  name: "Rex",
+  gender: "male",
+  legs: 4,
+  hands: 0,
+  saying: "woof",
+};
+
+const cat = {
+  species: "cat",
+  name: "Archie",
+  gender: "male",
+  legs: 4,
+  hands: 0,
+  saying: "meow",
+};
+
+const man = {
+  species: "human",
+  name: "Nate",
+  gender: "male",
+  legs: 2,
+  hands: 2,
+  saying: "Hello",
+};
+
+const woman = {
+  species: "human",
+  name: "Serena",
+  gender: "female",
+  legs: 2,
+  hands: 2,
+  saying: "Hey!",
+};
+
+const catWoman = {
+  species: "catWoman",
+  name: "Blair",
+  gender: "female",
+  legs: 2,
+  hands: 2,
+  saying: cat.saying,
+};
+
+const populations = [dog, cat, man, woman, catWoman];
+const properties = ["species", "name", "gender", "legs", "hands", "saying"];
 
 // ======== OUTPUT ========
 /* Use print(message) for output.
@@ -28,4 +75,6 @@
    print('human; <strong>John</strong>; male; 2; 2; <em>Hello world!</em>; Rex, Tom, Jenny', 'div');
    */
 
-
+const message = (arr, types) =>
+arr.map((item) => types.map((type) => item[type]).join("; ")).join("\n");
+print(message(populations,properties));
