@@ -7,54 +7,6 @@
 
 // ======== OBJECTS DEFINITIONS ========
 // Define your objects here
-
-// const dog = {
-//   species: "dog",
-//   name: "Rex",
-//   gender: "male",
-//   legs: 4,
-//   hands: 0,
-//   saying: "woof",
-// };
-
-// const cat = {
-//   species: "cat",
-//   name: "Archie",
-//   gender: "male",
-//   legs: 4,
-//   hands: 0,
-//   saying: "meow",
-// };
-
-// const man = {
-//   species: "human",
-//   name: "Nate",
-//   gender: "male",
-//   legs: 2,
-//   hands: 2,
-//   saying: "Hello",
-// };
-
-// const woman = {
-//   species: "human",
-//   name: "Serena",
-//   gender: "female",
-//   legs: 2,
-//   hands: 2,
-//   saying: "Hey!",
-// };
-
-// const catWoman = {
-//   species: "catWoman",
-//   name: "Blair",
-//   gender: "female",
-//   legs: 2,
-//   hands: 2,
-//   saying: cat.saying,
-// };
-// const populations = [dog, cat, man, woman, catWoman];
-// const properties = ["species", "name", "gender", "legs", "hands", "saying"];
-
 class Populations {
   constructor(species, name, gender, legs, saying) {
    this.species = species;
@@ -149,10 +101,5 @@ let catWoman = new CatWoman('Blair');
    print('human; <strong>John</strong>; male; 2; 2; <em>Hello world!</em>; Rex, Tom, Jenny');
    print('human; <strong>John</strong>; male; 2; 2; <em>Hello world!</em>; Rex, Tom, Jenny', 'div');
    */
-
-// const message = (arr, types) =>
-// arr.map((item) => types.map((type) => item[type]).join("; ")).join("\n");
-// print(message(populations,properties));
-
 const populations = [man, woman, catWoman, cat, dog];
 populations.forEach(populations => print(populations.getOutput()))
